@@ -27,8 +27,11 @@ add_library(HPL STATIC ${all_sources})
 add_library(Newton STATIC IMPORTED)
 set_target_properties(Newton PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/../dependencies/lib/linux/libNewton.a)
 
-add_library(angelscript STATIC IMPORTED)
-set_target_properties(angelscript PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/../dependencies/lib/linux/libangelscript.a)
+# add_library(angelscript STATIC IMPORTED)
+# set_target_properties(angelscript PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/../dependencies/lib/linux/libangelscript.a)
+
+target_include_directories(HPL PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include/angelscript/include)
+target_link_libraries(HPL PRIVATE angelscript)
 
 add_library(SDLmain STATIC IMPORTED)
 set_target_properties(SDLmain PROPERTIES IMPORTED_LOCATION ${CMAKE_CURRENT_SOURCE_DIR}/../dependencies/lib/linux/libSDLmain.a)
