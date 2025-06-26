@@ -10,6 +10,7 @@ Makefile
 /*.xcodeproj/*.pbxuser
 /assets/*.log
 /assets/core/cache/*collcach
+NOTES.md
 
 *.cpp.o.d
 *.c.o.d
