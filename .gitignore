@@ -1,6 +1,7 @@
 /build
 /CMakeFiles/
 /CMakeCache.txt
+/include/dependencies/glew
 cmake_install.cmake
 Makefile
 /.vscode
