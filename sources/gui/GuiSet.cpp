@@ -64,7 +64,7 @@ namespace hpl {
 	//-----------------------------------------------------------------------
 
 	bool cGuiRenderObjectCompare::operator()(	const cGuiRenderObject& aObjectA,
-												const cGuiRenderObject& aObjectB)
+												const cGuiRenderObject& aObjectB) const
 	{
 		//Z
 		float fZA = aObjectA.mvPos.z;
@@ -330,8 +330,7 @@ namespace hpl {
 
 	//-----------------------------------------------------------------------
 
-	void cGuiSet::DrawGfx(	cGuiGfxElement* apGfx, const cVector3f &avPos, const cVector2f &avSize,
-							const cColor& aColor,eGuiMaterial aMaterial)
+	void cGuiSet::DrawGfx(cGuiGfxElement* apGfx, const cVector3f &avPos, const cVector2f &avSize, const cColor& aColor,eGuiMaterial aMaterial) const
 	{
 		if(mpCurrentClipRegion==NULL) return;
 		if(mpCurrentClipRegion->mRect.w ==0 || mpCurrentClipRegion->mRect.h==0) return;

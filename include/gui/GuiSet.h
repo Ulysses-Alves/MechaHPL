@@ -73,7 +73,7 @@ namespace hpl {
 	class cGuiRenderObjectCompare
 	{
 	public:
-		bool operator()(const cGuiRenderObject& aObjectA, const cGuiRenderObject& aObjectB);
+		bool operator()(const cGuiRenderObject& aObjectA, const cGuiRenderObject& aObjectB) const;
 	};
 
 	typedef std::multiset<cGuiRenderObject,cGuiRenderObjectCompare> tGuiRenderObjectSet;
@@ -129,7 +129,7 @@ namespace hpl {
 						const cVector3f &avPos,
 						const cVector2f &avSize=-1,
 						const cColor& aColor=cColor(1,1),
-						eGuiMaterial aMaterial = eGuiMaterial_LastEnum);
+						eGuiMaterial aMaterial = eGuiMaterial_LastEnum) const;
 		void DrawFont(	const tWString &asText,
 						iFontData *apFont, const cVector3f &avPos,
 						const cVector2f &avSize, const cColor& aColor,
@@ -298,7 +298,7 @@ namespace hpl {
 		iWidget* mpWidgetRoot;
 		tWidgetList mlstWidgets;
 
-		tGuiRenderObjectSet m_setRenderObjects;
+		mutable tGuiRenderObjectSet m_setRenderObjects;
 
 
 		cVector2f mvVirtualSize;

@@ -112,7 +112,7 @@ namespace hpl {
 
 	void cGraphicsDrawer::DrawGfxObject(cGfxObject* apObject, const cVector3f& avPos,
 										const cVector2f& avSize, const cColor& aColor,
-										bool abFlipH, bool abFlipV, float afAngle)
+										bool abFlipH, bool abFlipV, float afAngle) const
 	{
 		FlushImage(apObject);
 
@@ -132,7 +132,7 @@ namespace hpl {
 
 	//-----------------------------------------------------------------------
 
-	void cGraphicsDrawer::DrawGfxObject(cGfxObject* apObject, const cVector3f& avPos)
+	void cGraphicsDrawer::DrawGfxObject(cGfxObject* apObject, const cVector3f& avPos) const
 	{
 		FlushImage(apObject);
 

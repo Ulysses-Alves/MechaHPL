@@ -77,7 +77,7 @@ namespace hpl {
 		 * \param apObject
 		 * \param avPos
 		 */
-		void DrawGfxObject(cGfxObject* apObject, const cVector3f& avPos);
+		void DrawGfxObject(cGfxObject* apObject, const cVector3f& avPos) const;
 
 		/**
 		 * Draw Gfx object during next DrawAll call.
@@ -90,7 +90,7 @@ namespace hpl {
 		 */
 		void DrawGfxObject(cGfxObject* apObject, const cVector3f& avPos,
 											const cVector2f& avSize, const cColor& aColor,
-											bool abFlipH=false, bool abFlipV=false, float afAngle = 0);
+											bool abFlipH=false, bool abFlipV=false, float afAngle = 0) const;
 
 
 		/**
@@ -138,7 +138,7 @@ namespace hpl {
 		cMaterialHandler* mpMaterialHandler;
 		cResources *mpResources;
 
-		tGfxBufferSet m_setGfxBuffer;
+		mutable tGfxBufferSet m_setGfxBuffer;
 
 		tGfxObjectList mlstGfxObjects;
 
